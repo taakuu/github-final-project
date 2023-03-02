@@ -34,3 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Write annotaion 1
+        run: |
+          echo "### Hello world 1! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - name: Write annotaion 2
+        run: |
+          echo "### Hello world 2! :rocket:" >> $GITHUB_STEP_SUMMARY
