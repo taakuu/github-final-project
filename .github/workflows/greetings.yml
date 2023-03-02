@@ -1,6 +1,9 @@
 name: Greetings
 
-on: [pull_request_target, issues]
+on: 
+  pull_request_target: 
+  issues:
+  workflow_dispatch:
 
 jobs:
   greeting:
@@ -14,3 +17,11 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Message that will be displayed on users' first issue"
         pr-message: "Message that will be displayed on users' first pull request"
+
+    - name: Write annotaion 1
+      run: |
+        echo "### Hello world 1! :rocket:" >> $GITHUB_STEP_SUMMARY
+
+    - name: Write annotaion 2
+      run: |
+        echo "### Hello world 2! :rocket:" >> $GITHUB_STEP_SUMMARY
